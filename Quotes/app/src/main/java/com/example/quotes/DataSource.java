@@ -14,10 +14,12 @@ public class DataSource {
     }
 
     public ArrayList<Integer> getmPhotoPool()   {
+
         return mPhotoPool;
     }
 
     public ArrayList<Integer> getmQuotePool()   {
+
         return mQuotePool;
     }
 
@@ -34,6 +36,7 @@ public class DataSource {
         mPhotoPool.add(R.drawable.steve_9);
         mPhotoPool.add(R.drawable.steve_10);
     }
+
     private void setupQuotePool() {
         mQuotePool.add(R.string.quote_1);
         mQuotePool.add(R.string.quote_2);
@@ -46,6 +49,7 @@ public class DataSource {
         mQuotePool.add(R.string.quote_9);
         mQuotePool.add(R.string.quote_10);
     }
+
     private void setupPhotoHDPool() {
         mPhotoHdPool.add(R.drawable.steve_hd_1);
         mPhotoHdPool.add(R.drawable.steve_hd_2);
@@ -60,13 +64,16 @@ public class DataSource {
     }
 
     public int getDataSourceLength() {
+
         return mPhotoPool.size();
     }
 
     public DataSource() {
+
         setupPhotoPool();
         setupQuotePool();
         setupPhotoHDPool();
+
         mPhotoPool = new ArrayList();
         mQuotePool = new ArrayList();
         mPhotoHdPool = new ArrayList();
