@@ -65,9 +65,12 @@ public class QuoteReaderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quote_reader);
+
         ListView mListView = findViewById(R.id.quotes_list);
         mListView.setAdapter(new QuoteAdapter(this));
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quote_reader);
+
     }
 }
