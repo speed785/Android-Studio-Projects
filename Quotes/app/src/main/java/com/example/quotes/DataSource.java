@@ -10,14 +10,17 @@ public class DataSource {
 
 
     public ArrayList<Integer> getmPhotoHdPool()  {
+
         return mPhotoHdPool;
     }
 
     public ArrayList<Integer> getmPhotoPool()   {
+
         return mPhotoPool;
     }
 
     public ArrayList<Integer> getmQuotePool()   {
+
         return mQuotePool;
     }
 
@@ -64,11 +67,13 @@ public class DataSource {
     }
 
     public DataSource() {
-        setupPhotoPool();
-        setupQuotePool();
-        setupPhotoHDPool();
+
         mPhotoPool = new ArrayList();
         mQuotePool = new ArrayList();
         mPhotoHdPool = new ArrayList();
+
+        setupPhotoPool();
+        setupQuotePool();
+        setupPhotoHDPool();
     }
 }
