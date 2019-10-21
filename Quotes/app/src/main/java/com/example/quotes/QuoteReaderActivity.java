@@ -18,16 +18,19 @@ public class QuoteReaderActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
+
             return mDataSource.getDataSourceLength();
         }
 
         @Override
         public Object getItem(int position) {
+
             return position;
         }
 
         @Override
         public long getItemId(int position) {
+
             return position;
         }
 
@@ -49,14 +52,12 @@ public class QuoteReaderActivity extends AppCompatActivity {
             return convertView;
         }
 
-        private Context mContext;
         private LayoutInflater mInflator;
         private DataSource mDataSource;
 
-        public QuoteAdapter(Context c) {
-            mContext = c;
+        QuoteAdapter(Context c) {
             mInflator = (LayoutInflater)
-                    mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             mDataSource = new DataSource();
         }
     }
@@ -65,9 +66,12 @@ public class QuoteReaderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quote_reader);
+
         ListView mListView = findViewById(R.id.quotes_list);
         mListView.setAdapter(new QuoteAdapter(this));
+
     }
 }
