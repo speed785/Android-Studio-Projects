@@ -2,10 +2,12 @@ package com.example.quotes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.content.Context;
 import android.widget.ImageView;
@@ -18,16 +20,19 @@ public class QuoteReaderActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
+
             return mDataSource.getDataSourceLength();
         }
 
         @Override
         public Object getItem(int position) {
+
             return position;
         }
 
         @Override
         public long getItemId(int position) {
+
             return position;
         }
 
@@ -49,14 +54,12 @@ public class QuoteReaderActivity extends AppCompatActivity {
             return convertView;
         }
 
-        private Context mContext;
         private LayoutInflater mInflator;
         private DataSource mDataSource;
 
-        public QuoteAdapter(Context c) {
-            mContext = c;
+        QuoteAdapter(Context c) {
             mInflator = (LayoutInflater)
-                    mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             mDataSource = new DataSource();
         }
     }
@@ -66,11 +69,20 @@ public class QuoteReaderActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        ListView mListView = findViewById(R.id.quotes_list);
-        mListView.setAdapter(new QuoteAdapter(this));
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quote_reader);
 
+        ListView mListView = findViewById(R.id.quotes_list);
+        mListView.setAdapter(new QuoteAdapter(this));
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView arg0, View arg1, int position,
+                                    long arg3) {
+                Intent i = new Intent(QuoteReaderActivity.this, QuoteDetail.class);
+                    i.putExtra("position", position);
+                    startActivity(i);
+            }
+        });
     }
 }

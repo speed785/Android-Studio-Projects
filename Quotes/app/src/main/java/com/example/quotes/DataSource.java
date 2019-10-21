@@ -10,6 +10,7 @@ public class DataSource {
 
 
     public ArrayList<Integer> getmPhotoHdPool()  {
+
         return mPhotoHdPool;
     }
 
@@ -70,12 +71,12 @@ public class DataSource {
 
     public DataSource() {
 
-        setupPhotoPool();
-        setupQuotePool();
-        setupPhotoHDPool();
-
         mPhotoPool = new ArrayList();
         mQuotePool = new ArrayList();
         mPhotoHdPool = new ArrayList();
+
+        setupPhotoPool();
+        setupQuotePool();
+        setupPhotoHDPool();
     }
 }
