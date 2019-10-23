@@ -31,13 +31,13 @@ public class DataSource {
         mPhotoPool.add(R.drawable.steve_3);
         mPhotoPool.add(R.drawable.steve_4);
         mPhotoPool.add(R.drawable.steve_5);
-        mPhotoPool.add(R.drawable.steve_6);
-        mPhotoPool.add(R.drawable.steve_7);
-        mPhotoPool.add(R.drawable.steve_8);
-        mPhotoPool.add(R.drawable.steve_9);
-        mPhotoPool.add(R.drawable.steve_10);
+        mPhotoPool.add(R.drawable.quote6);
+        mPhotoPool.add(R.drawable.quote7);
+        mPhotoPool.add(R.drawable.quote8);
+        mPhotoPool.add(R.drawable.quote9);
+        mPhotoPool.add(R.drawable.quote10);
     }
-
+    // From 6-10 the quotes are from the best tv sitcom The Office. - Michael Scott
     private void setupQuotePool() {
         mQuotePool.add(R.string.quote_1);
         mQuotePool.add(R.string.quote_2);
@@ -57,11 +57,11 @@ public class DataSource {
         mPhotoHdPool.add(R.drawable.steve_hd_3);
         mPhotoHdPool.add(R.drawable.steve_hd_4);
         mPhotoHdPool.add(R.drawable.steve_hd_5);
-        mPhotoHdPool.add(R.drawable.steve_hd_6);
-        mPhotoHdPool.add(R.drawable.steve_hd_7);
-        mPhotoHdPool.add(R.drawable.steve_hd_8);
-        mPhotoHdPool.add(R.drawable.steve_hd_9);
-        mPhotoHdPool.add(R.drawable.apple_hd);
+        mPhotoHdPool.add(R.drawable.quote6hd);
+        mPhotoHdPool.add(R.drawable.quote7hd);
+        mPhotoHdPool.add(R.drawable.quote8hd);
+        mPhotoHdPool.add(R.drawable.quote9hd);
+        mPhotoHdPool.add(R.drawable.quote10hd);
     }
 
     public int getDataSourceLength() {
