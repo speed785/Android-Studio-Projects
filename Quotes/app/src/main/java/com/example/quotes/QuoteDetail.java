@@ -13,7 +13,7 @@ public class QuoteDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quote_detail);
-
+        
         Intent i = getIntent();
         int mPosition = i.getIntExtra("position", 0);
         DataSource mDataSource = new DataSource();
