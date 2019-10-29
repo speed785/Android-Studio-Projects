@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TempConverter2</string>
+    <string name="show_5_day_forecast">Show 5 Day Forecast</string>
+</resources>
