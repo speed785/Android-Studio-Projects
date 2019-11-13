@@ -18,7 +18,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     private ListView playlist;
 
     @Override
@@ -39,10 +39,11 @@ public class MainActivity extends Activity {
             StringBuilder jsonResult = new StringBuilder();
 
             try {
-
-                URL url = new URL("http:papademas.netL81/cd_catalog.json");
+                //I've been trying for almost 1.5 week and I had the URL wrong...
+                //SUPER WORKED UP!! It works now, I changed the colors to brighter yellow/white
+                URL url = new URL("http://www.papademas.net:81/cd_catalog.json");
                 urlConnection = (HttpURLConnection)
-                        url.openConnection();
+                                  url.openConnection();
                 InputStream in = new BufferedInputStream(urlConnection.getInputStream());
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -53,7 +54,7 @@ public class MainActivity extends Activity {
                 System.out.println("Returned Json url object " + jsonResult.toString());
 
             } catch (Exception e) {
-                System.out.println("Err: " + e);
+                System.out.println("Error: " + e);
             } finally {
                 urlConnection.disconnect();
             }
