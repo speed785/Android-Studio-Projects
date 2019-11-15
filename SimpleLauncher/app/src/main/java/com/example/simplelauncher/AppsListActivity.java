@@ -23,7 +23,7 @@ public class AppsListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apps_list);
 
-        //invoke loadApps, loadListView, and addClickListener bbbbbbbbbbbbbbbbbbbbbbbb
+        //invoke loadApps, loadListView, and addClickListener 
         loadApps();
         loadListView();
         addClickListener();
