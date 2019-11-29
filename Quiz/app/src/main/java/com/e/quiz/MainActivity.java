@@ -139,9 +139,10 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }//end switch
                 //Rating bar color change (fingers crossed it works)
+                //Update: it works for the first responce, so I need to add if -- else for later.
                 RatingBar rb = findViewById(R.id.ratingBar);
                 rb.setRating(3);
-            }
+        }
         });
         imageListener();
     }//end buttonListener
