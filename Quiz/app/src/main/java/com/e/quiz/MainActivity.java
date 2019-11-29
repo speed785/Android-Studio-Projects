@@ -87,9 +87,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                RatingBar rb = findViewById(R.id.ratingBar);
-                rb.setRating(3);
-
                 // get selected radio button from radioGroup
                 int selectedId = radioQuestions.getCheckedRadioButtonId();
 
@@ -141,6 +138,9 @@ public class MainActivity extends AppCompatActivity {
                                 " Wrong!", Toast.LENGTH_SHORT).show();
                         break;
                 }//end switch
+                //Rating bar color change (fingers crossed it works)
+                RatingBar rb = findViewById(R.id.ratingBar);
+                rb.setRating(3);
             }
         });
         imageListener();
