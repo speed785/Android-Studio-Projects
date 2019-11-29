@@ -1,35 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:background="#FFC107"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="-40dp"
+        android:text="Question:"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="83dp"
+        android:layout_width="375dp"
+        android:layout_height="114dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="48dp"
         android:width="400dp"
-        android:paddingTop="20px"
-        android:paddingBottom="20px"
+        android:background="#F1D384"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         android:textSize="12sp" />
 
     <RadioGroup
         android:id="@+id/radioQuestions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-
         <RadioButton
             android:id="@+id/radioTrue"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
             android:checked="true"
             android:text="@string/radio_true" />
 
         <RadioButton
             android:id="@+id/radioFalse"
-            android:layout_width="124dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="-25dp"
+            android:layout_marginBottom="40dp"
             android:text="@string/radio_false" />
 
     </RadioGroup>
@@ -38,19 +60,34 @@
         android:id="@+id/btnDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="64dp"
         android:text="@string/btn_display" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="-50dp"
+        android:text="Next Question"
+        android:textSize="18sp" />
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="252dp"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="-30dp"
         android:clickable="true"
+        android:contentDescription="TODO"
         android:src="@drawable/next" />
 
     <RatingBar
         android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="241dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginBottom="28dp"
         android:isIndicator="true"
         android:numStars="5"
         android:rating="2.0"
