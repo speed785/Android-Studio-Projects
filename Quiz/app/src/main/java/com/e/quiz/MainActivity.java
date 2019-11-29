@@ -115,7 +115,31 @@ public class MainActivity extends AppCompatActivity {
                         else Toast.makeText(MainActivity.this,
                                 " Wrong!", Toast.LENGTH_SHORT).show();
                         break;
-                    //finish switch cases 2-4
+                    //finished switch cases 2-4
+                    case 2: //Cases 2-4 VVVVVVVVVVVVVVVV Below
+                        //verify if result matches the right button selection //i.e., (True or false!)
+                        if (radioButton.getText().equals("True"))
+                            Toast.makeText(MainActivity.this,
+                                    " Right!", Toast.LENGTH_SHORT).show();
+                        else Toast.makeText(MainActivity.this,
+                                " Wrong!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 3:
+                        //verify if result matches the right button selection //i.e., (True or false!)
+                        if (radioButton.getText().equals("False"))
+                            Toast.makeText(MainActivity.this,
+                                    " Right!", Toast.LENGTH_SHORT).show();
+                        else Toast.makeText(MainActivity.this,
+                                " Wrong!", Toast.LENGTH_SHORT).show();
+                        break;
+                    case 4:
+                        //verify if result matches the right button selection //i.e., (True or false!)
+                        if (radioButton.getText().equals("False"))
+                            Toast.makeText(MainActivity.this,
+                                    " Right!", Toast.LENGTH_SHORT).show();
+                        else Toast.makeText(MainActivity.this,
+                                " Wrong!", Toast.LENGTH_SHORT).show();
+                        break;
                 }//end switch
             }
         });
