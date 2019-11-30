@@ -114,4 +114,15 @@ public class SqlHelper extends SQLiteOpenHelper {
         db.close();
         Log.d("deleteBook", book.toString());
     }
+
+    // get Id (book count) in MainActivity.java
+    public int getId(){
+        String selectQuery = "SELECT id FROM books";
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor c = database.rawQuery(selectQuery, null);
+        c.moveToFirst();
+        int total = c.getCount();
+        return total;
+    }
 }
+

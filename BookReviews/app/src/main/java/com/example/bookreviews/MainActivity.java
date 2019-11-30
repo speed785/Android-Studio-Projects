@@ -3,6 +3,7 @@ package com.example.bookreviews;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.List;
 
@@ -30,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
         db.deleteBook(list.get(0));
         // get all books
         db.getAllBooks();
+
+        // get book count
+        Log.d("Book Count", db.getId() + "");
+
+        //get list count size
+        Log.d("count", "Count test:" + list.size());
+
+        //
+        Log.d("name", "James Dumitru");
+
     }
 }
 
